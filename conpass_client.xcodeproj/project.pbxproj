@@ -23,6 +23,7 @@
 		574F917C232BABC8003C5D75 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574F9179232BABC3003C5D75 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		574F917F232BC7CF003C5D75 /* SearchEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */; };
 		574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9180232BC7F2003C5D75 /* SearchEventModel.swift */; };
+		574F9183232BD7DD003C5D75 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9182232BD7DD003C5D75 /* TopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		574F9179232BABC3003C5D75 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewModel.swift; sourceTree = "<group>"; };
 		574F9180232BC7F2003C5D75 /* SearchEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventModel.swift; sourceTree = "<group>"; };
+		574F9182232BD7DD003C5D75 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
