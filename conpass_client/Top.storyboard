@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top View Controller-->
+        <!--Top Event View Controller-->
         <scene sceneID="slI-2p-qwU">
             <objects>
-                <viewController id="FoF-lO-p1L" customClass="TopViewController" customModule="conpass_client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FoF-lO-p1L" customClass="TopEventViewController" customModule="conpass_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bXK-qU-zkF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopTableViewCell" rowHeight="79" id="iwj-yk-AaK" customClass="TopTableViewCell" customModule="conpass_client" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopEventTableViewCell" rowHeight="79" id="iwj-yk-AaK" customClass="TopEventTableViewCell" customModule="conpass_client" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwj-yk-AaK" id="fXX-OU-f3b">
@@ -62,7 +62,7 @@
                         <viewLayoutGuide key="safeArea" id="MaR-SF-Jra"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="xBb-l1-eqM" id="crt-zU-5OO"/>
+                        <outlet property="tableView" destination="xBb-l1-eqM" id="aGH-Hw-bHZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blN-y8-zom" userLabel="First Responder" sceneMemberID="firstResponder"/>
