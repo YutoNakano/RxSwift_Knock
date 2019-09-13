@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F913E232B9484003C5D75 /* AppDelegate.swift */; };
 		574F9141232B9484003C5D75 /* SearchEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9140232B9484003C5D75 /* SearchEventViewController.swift */; };
-		574F9144232B9484003C5D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9142232B9484003C5D75 /* Main.storyboard */; };
+		574F9144232B9484003C5D75 /* SearchEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9142232B9484003C5D75 /* SearchEvent.storyboard */; };
 		574F9146232B9486003C5D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574F9145232B9486003C5D75 /* Assets.xcassets */; };
 		574F9149232B9486003C5D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9147232B9486003C5D75 /* LaunchScreen.storyboard */; };
 		574F9154232B9486003C5D75 /* conpass_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9153232B9486003C5D75 /* conpass_clientTests.swift */; };
@@ -24,6 +24,8 @@
 		574F917F232BC7CF003C5D75 /* SearchEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */; };
 		574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9180232BC7F2003C5D75 /* SearchEventModel.swift */; };
 		574F9183232BD7DD003C5D75 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9182232BD7DD003C5D75 /* TopViewController.swift */; };
+		574F9185232BDA03003C5D75 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9184232BDA03003C5D75 /* Top.storyboard */; };
+		574F9187232BDB71003C5D75 /* TopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9186232BDB71003C5D75 /* TopTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +65,7 @@
 		574F913B232B9484003C5D75 /* conpass_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conpass_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		574F913E232B9484003C5D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		574F9140232B9484003C5D75 /* SearchEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewController.swift; sourceTree = "<group>"; };
-		574F9143232B9484003C5D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		574F9143232B9484003C5D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchEvent.storyboard; sourceTree = "<group>"; };
 		574F9145232B9486003C5D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		574F9148232B9486003C5D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		574F914A232B9486003C5D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewModel.swift; sourceTree = "<group>"; };
 		574F9180232BC7F2003C5D75 /* SearchEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventModel.swift; sourceTree = "<group>"; };
 		574F9182232BD7DD003C5D75 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		574F9184232BDA03003C5D75 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
+		574F9186232BDB71003C5D75 /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +140,8 @@
 			children = (
 				574F917D232BC7BE003C5D75 /* Search */,
 				574F913E232B9484003C5D75 /* AppDelegate.swift */,
-				574F9142232B9484003C5D75 /* Main.storyboard */,
+				574F9142232B9484003C5D75 /* SearchEvent.storyboard */,
+				574F9184232BDA03003C5D75 /* Top.storyboard */,
 				574F9145232B9486003C5D75 /* Assets.xcassets */,
 				574F9147232B9486003C5D75 /* LaunchScreen.storyboard */,
 				574F914A232B9486003C5D75 /* Info.plist */,
@@ -179,6 +184,8 @@
 				574F9140232B9484003C5D75 /* SearchEventViewController.swift */,
 				574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */,
 				574F9180232BC7F2003C5D75 /* SearchEventModel.swift */,
+				574F9182232BD7DD003C5D75 /* TopViewController.swift */,
+				574F9186232BDB71003C5D75 /* TopTableViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -292,7 +299,8 @@
 				574F9149232B9486003C5D75 /* LaunchScreen.storyboard in Resources */,
 				574F9178232BAB1C003C5D75 /* Input.xcfilelist in Resources */,
 				574F9146232B9486003C5D75 /* Assets.xcassets in Resources */,
-				574F9144232B9484003C5D75 /* Main.storyboard in Resources */,
+				574F9144232B9484003C5D75 /* SearchEvent.storyboard in Resources */,
+				574F9185232BDA03003C5D75 /* Top.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +350,8 @@
 				574F9141232B9484003C5D75 /* SearchEventViewController.swift in Sources */,
 				574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */,
 				574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */,
+				574F9183232BD7DD003C5D75 /* TopViewController.swift in Sources */,
+				574F9187232BDB71003C5D75 /* TopTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,12 +387,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		574F9142232B9484003C5D75 /* Main.storyboard */ = {
+		574F9142232B9484003C5D75 /* SearchEvent.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				574F9143232B9484003C5D75 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SearchEvent.storyboard;
 			sourceTree = "<group>";
 		};
 		574F9147232B9486003C5D75 /* LaunchScreen.storyboard */ = {
