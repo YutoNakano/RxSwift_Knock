@@ -55,6 +55,7 @@
 				574F9175232BAAF9003C5D75 /* RxSwift.framework in Embed Frameworks */,
 				574F9173232BAAF9003C5D75 /* RxCocoa.framework in Embed Frameworks */,
 				574F917C232BABC8003C5D75 /* RxRelay.framework in Embed Frameworks */,
+				574F918F232BE148003C5D75 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,9 +82,12 @@
 		574F9179232BABC3003C5D75 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewModel.swift; sourceTree = "<group>"; };
 		574F9180232BC7F2003C5D75 /* SearchEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventModel.swift; sourceTree = "<group>"; };
-		574F9182232BD7DD003C5D75 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		574F9182232BD7DD003C5D75 /* TopEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventViewController.swift; sourceTree = "<group>"; };
 		574F9184232BDA03003C5D75 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
-		574F9186232BDB71003C5D75 /* TopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewCell.swift; sourceTree = "<group>"; };
+		574F9186232BDB71003C5D75 /* TopEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventTableViewCell.swift; sourceTree = "<group>"; };
+		574F9188232BDE93003C5D75 /* TopEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventViewModel.swift; sourceTree = "<group>"; };
+		574F918A232BDEAD003C5D75 /* TopEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventModel.swift; sourceTree = "<group>"; };
+		574F918D232BE147003C5D75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				574F917A232BABC3003C5D75 /* RxRelay.framework in Frameworks */,
 				574F9174232BAAF9003C5D75 /* RxSwift.framework in Frameworks */,
 				574F9171232BAAF2003C5D75 /* RxCocoa.framework in Frameworks */,
+				574F918E232BE148003C5D75 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +122,7 @@
 		574F9132232B9484003C5D75 = {
 			isa = PBXGroup;
 			children = (
+				574F918D232BE147003C5D75 /* Alamofire.framework */,
 				574F913D232B9484003C5D75 /* conpass_client */,
 				574F9152232B9486003C5D75 /* conpass_clientTests */,
 				574F915D232B9486003C5D75 /* conpass_clientUITests */,
@@ -138,6 +144,7 @@
 		574F913D232B9484003C5D75 /* conpass_client */ = {
 			isa = PBXGroup;
 			children = (
+				574F918C232BDF99003C5D75 /* TopEvent */,
 				574F917D232BC7BE003C5D75 /* Search */,
 				574F913E232B9484003C5D75 /* AppDelegate.swift */,
 				574F9142232B9484003C5D75 /* SearchEvent.storyboard */,
