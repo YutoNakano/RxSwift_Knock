@@ -6,4 +6,11 @@
 //  Copyright © 2019 中野湧仁. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import RxSwift
+
+final class TopTableViewCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
+}
