@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574F1D60232CBD5400559D6F /* EventList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F1D5F232CBD5400559D6F /* EventList.storyboard */; };
+		574F1D63232CBE7900559D6F /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F1D62232CBE7900559D6F /* EventListViewController.swift */; };
 		574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F913E232B9484003C5D75 /* AppDelegate.swift */; };
 		574F9141232B9484003C5D75 /* SearchEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9140232B9484003C5D75 /* SearchEventViewController.swift */; };
 		574F9144232B9484003C5D75 /* SearchEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9142232B9484003C5D75 /* SearchEvent.storyboard */; };
@@ -67,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		574F1D5F232CBD5400559D6F /* EventList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventList.storyboard; sourceTree = "<group>"; };
+		574F1D62232CBE7900559D6F /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		574F913B232B9484003C5D75 /* conpass_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conpass_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		574F913E232B9484003C5D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		574F9140232B9484003C5D75 /* SearchEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		574F1D61232CBE4C00559D6F /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				574F1D5F232CBD5400559D6F /* EventList.storyboard */,
+				574F1D62232CBE7900559D6F /* EventListViewController.swift */,
+			);
+			path = EventList;
+			sourceTree = "<group>";
+		};
 		574F9132232B9484003C5D75 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 		574F913D232B9484003C5D75 /* conpass_client */ = {
 			isa = PBXGroup;
 			children = (
+				574F1D61232CBE4C00559D6F /* EventList */,
 				574F918C232BDF99003C5D75 /* TopEvent */,
 				574F917D232BC7BE003C5D75 /* Search */,
 				574F913E232B9484003C5D75 /* AppDelegate.swift */,
@@ -317,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				574F9149232B9486003C5D75 /* LaunchScreen.storyboard in Resources */,
+				574F1D60232CBD5400559D6F /* EventList.storyboard in Resources */,
 				574F9178232BAB1C003C5D75 /* Input.xcfilelist in Resources */,
 				574F9146232B9486003C5D75 /* Assets.xcassets in Resources */,
 				574F9144232B9484003C5D75 /* SearchEvent.storyboard in Resources */,
@@ -370,6 +385,7 @@
 				574F9141232B9484003C5D75 /* SearchEventViewController.swift in Sources */,
 				574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */,
 				574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */,
+				574F1D63232CBE7900559D6F /* EventListViewController.swift in Sources */,
 				574F918B232BDEAD003C5D75 /* TopEventModel.swift in Sources */,
 				574F9189232BDE93003C5D75 /* TopEventViewModel.swift in Sources */,
 				574F9183232BD7DD003C5D75 /* TopEventViewController.swift in Sources */,
