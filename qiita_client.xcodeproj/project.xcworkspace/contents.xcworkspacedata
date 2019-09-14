@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:conpass_client.xcodeproj">
+      location = "self:/Users/nakanoyuuhitoshi/Local/local-iOS/conpass_client/qiita_client.xcodeproj">
    </FileRef>
 </Workspace>

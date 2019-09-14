@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5748A3DE232D1BD8004E7FD8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5748A3DD232D1BD8004E7FD8 /* Config.swift */; };
+		5748A3E0232D29AD004E7FD8 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5748A3DF232D29AD004E7FD8 /* Entry.swift */; };
 		574F1D60232CBD5400559D6F /* EventList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F1D5F232CBD5400559D6F /* EventList.storyboard */; };
 		574F1D63232CBE7900559D6F /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F1D62232CBE7900559D6F /* EventListViewController.swift */; };
 		574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F913E232B9484003C5D75 /* AppDelegate.swift */; };
 		574F9141232B9484003C5D75 /* SearchEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9140232B9484003C5D75 /* SearchEventViewController.swift */; };
-		574F9144232B9484003C5D75 /* SearchEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9142232B9484003C5D75 /* SearchEvent.storyboard */; };
+		574F9144232B9484003C5D75 /* SearchEntry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9142232B9484003C5D75 /* SearchEntry.storyboard */; };
 		574F9146232B9486003C5D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574F9145232B9486003C5D75 /* Assets.xcassets */; };
 		574F9149232B9486003C5D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9147232B9486003C5D75 /* LaunchScreen.storyboard */; };
 		574F9154232B9486003C5D75 /* conpass_clientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9153232B9486003C5D75 /* conpass_clientTests.swift */; };
@@ -25,11 +27,11 @@
 		574F917C232BABC8003C5D75 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574F9179232BABC3003C5D75 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		574F917F232BC7CF003C5D75 /* SearchEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */; };
 		574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9180232BC7F2003C5D75 /* SearchEventModel.swift */; };
-		574F9183232BD7DD003C5D75 /* TopEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9182232BD7DD003C5D75 /* TopEventViewController.swift */; };
+		574F9183232BD7DD003C5D75 /* TopEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9182232BD7DD003C5D75 /* TopEntryViewController.swift */; };
 		574F9185232BDA03003C5D75 /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F9184232BDA03003C5D75 /* Top.storyboard */; };
-		574F9187232BDB71003C5D75 /* TopEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9186232BDB71003C5D75 /* TopEventTableViewCell.swift */; };
-		574F9189232BDE93003C5D75 /* TopEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9188232BDE93003C5D75 /* TopEventViewModel.swift */; };
-		574F918B232BDEAD003C5D75 /* TopEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F918A232BDEAD003C5D75 /* TopEventModel.swift */; };
+		574F9187232BDB71003C5D75 /* TopEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9186232BDB71003C5D75 /* TopEntryTableViewCell.swift */; };
+		574F9189232BDE93003C5D75 /* TopEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F9188232BDE93003C5D75 /* TopEntryViewModel.swift */; };
+		574F918B232BDEAD003C5D75 /* TopEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F918A232BDEAD003C5D75 /* TopEntryModel.swift */; };
 		574F918E232BE148003C5D75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574F918D232BE147003C5D75 /* Alamofire.framework */; };
 		574F918F232BE148003C5D75 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574F918D232BE147003C5D75 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -69,19 +71,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5748A3DD232D1BD8004E7FD8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		5748A3DF232D29AD004E7FD8 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		574F1D5F232CBD5400559D6F /* EventList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventList.storyboard; sourceTree = "<group>"; };
 		574F1D62232CBE7900559D6F /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
-		574F913B232B9484003C5D75 /* conpass_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conpass_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		574F913B232B9484003C5D75 /* qiita_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiita_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		574F913E232B9484003C5D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		574F9140232B9484003C5D75 /* SearchEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewController.swift; sourceTree = "<group>"; };
-		574F9143232B9484003C5D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchEvent.storyboard; sourceTree = "<group>"; };
+		574F9143232B9484003C5D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchEntry.storyboard; sourceTree = "<group>"; };
 		574F9145232B9486003C5D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		574F9148232B9486003C5D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		574F914A232B9486003C5D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		574F914F232B9486003C5D75 /* conpass_clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conpass_clientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		574F914F232B9486003C5D75 /* qiita_clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qiita_clientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		574F9153232B9486003C5D75 /* conpass_clientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conpass_clientTests.swift; sourceTree = "<group>"; };
 		574F9155232B9486003C5D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		574F915A232B9486003C5D75 /* conpass_clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = conpass_clientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		574F915A232B9486003C5D75 /* qiita_clientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qiita_clientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		574F915E232B9486003C5D75 /* conpass_clientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conpass_clientUITests.swift; sourceTree = "<group>"; };
 		574F9160232B9486003C5D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		574F916E232BAAF1003C5D75 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -90,11 +94,11 @@
 		574F9179232BABC3003C5D75 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewModel.swift; sourceTree = "<group>"; };
 		574F9180232BC7F2003C5D75 /* SearchEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventModel.swift; sourceTree = "<group>"; };
-		574F9182232BD7DD003C5D75 /* TopEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventViewController.swift; sourceTree = "<group>"; };
+		574F9182232BD7DD003C5D75 /* TopEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntryViewController.swift; sourceTree = "<group>"; };
 		574F9184232BDA03003C5D75 /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
-		574F9186232BDB71003C5D75 /* TopEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventTableViewCell.swift; sourceTree = "<group>"; };
-		574F9188232BDE93003C5D75 /* TopEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventViewModel.swift; sourceTree = "<group>"; };
-		574F918A232BDEAD003C5D75 /* TopEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEventModel.swift; sourceTree = "<group>"; };
+		574F9186232BDB71003C5D75 /* TopEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntryTableViewCell.swift; sourceTree = "<group>"; };
+		574F9188232BDE93003C5D75 /* TopEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntryViewModel.swift; sourceTree = "<group>"; };
+		574F918A232BDEAD003C5D75 /* TopEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntryModel.swift; sourceTree = "<group>"; };
 		574F918D232BE147003C5D75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,9 +155,9 @@
 		574F913C232B9484003C5D75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				574F913B232B9484003C5D75 /* conpass_client.app */,
-				574F914F232B9486003C5D75 /* conpass_clientTests.xctest */,
-				574F915A232B9486003C5D75 /* conpass_clientUITests.xctest */,
+				574F913B232B9484003C5D75 /* qiita_client.app */,
+				574F914F232B9486003C5D75 /* qiita_clientTests.xctest */,
+				574F915A232B9486003C5D75 /* qiita_clientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,12 +169,12 @@
 				574F918C232BDF99003C5D75 /* TopEvent */,
 				574F917D232BC7BE003C5D75 /* Search */,
 				574F913E232B9484003C5D75 /* AppDelegate.swift */,
-				574F9142232B9484003C5D75 /* SearchEvent.storyboard */,
-				574F9184232BDA03003C5D75 /* Top.storyboard */,
+				574F9142232B9484003C5D75 /* SearchEntry.storyboard */,
 				574F9145232B9486003C5D75 /* Assets.xcassets */,
 				574F9147232B9486003C5D75 /* LaunchScreen.storyboard */,
 				574F914A232B9486003C5D75 /* Info.plist */,
 				574F9177232BAB1C003C5D75 /* Input.xcfilelist */,
+				5748A3DD232D1BD8004E7FD8 /* Config.swift */,
 			);
 			path = conpass_client;
 			sourceTree = "<group>";
@@ -216,10 +220,12 @@
 		574F918C232BDF99003C5D75 /* TopEvent */ = {
 			isa = PBXGroup;
 			children = (
-				574F9182232BD7DD003C5D75 /* TopEventViewController.swift */,
-				574F9186232BDB71003C5D75 /* TopEventTableViewCell.swift */,
-				574F9188232BDE93003C5D75 /* TopEventViewModel.swift */,
-				574F918A232BDEAD003C5D75 /* TopEventModel.swift */,
+				574F9184232BDA03003C5D75 /* Top.storyboard */,
+				574F9182232BD7DD003C5D75 /* TopEntryViewController.swift */,
+				574F9186232BDB71003C5D75 /* TopEntryTableViewCell.swift */,
+				574F9188232BDE93003C5D75 /* TopEntryViewModel.swift */,
+				574F918A232BDEAD003C5D75 /* TopEntryModel.swift */,
+				5748A3DF232D29AD004E7FD8 /* Entry.swift */,
 			);
 			path = TopEvent;
 			sourceTree = "<group>";
@@ -227,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		574F913A232B9484003C5D75 /* conpass_client */ = {
+		574F913A232B9484003C5D75 /* qiita_client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 574F9163232B9486003C5D75 /* Build configuration list for PBXNativeTarget "conpass_client" */;
+			buildConfigurationList = 574F9163232B9486003C5D75 /* Build configuration list for PBXNativeTarget "qiita_client" */;
 			buildPhases = (
 				574F9137232B9484003C5D75 /* Sources */,
 				574F9138232B9484003C5D75 /* Frameworks */,
@@ -241,14 +247,14 @@
 			);
 			dependencies = (
 			);
-			name = conpass_client;
+			name = qiita_client;
 			productName = conpass_client;
-			productReference = 574F913B232B9484003C5D75 /* conpass_client.app */;
+			productReference = 574F913B232B9484003C5D75 /* qiita_client.app */;
 			productType = "com.apple.product-type.application";
 		};
-		574F914E232B9486003C5D75 /* conpass_clientTests */ = {
+		574F914E232B9486003C5D75 /* qiita_clientTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 574F9166232B9486003C5D75 /* Build configuration list for PBXNativeTarget "conpass_clientTests" */;
+			buildConfigurationList = 574F9166232B9486003C5D75 /* Build configuration list for PBXNativeTarget "qiita_clientTests" */;
 			buildPhases = (
 				574F914B232B9486003C5D75 /* Sources */,
 				574F914C232B9486003C5D75 /* Frameworks */,
@@ -259,14 +265,14 @@
 			dependencies = (
 				574F9151232B9486003C5D75 /* PBXTargetDependency */,
 			);
-			name = conpass_clientTests;
+			name = qiita_clientTests;
 			productName = conpass_clientTests;
-			productReference = 574F914F232B9486003C5D75 /* conpass_clientTests.xctest */;
+			productReference = 574F914F232B9486003C5D75 /* qiita_clientTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		574F9159232B9486003C5D75 /* conpass_clientUITests */ = {
+		574F9159232B9486003C5D75 /* qiita_clientUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 574F9169232B9486003C5D75 /* Build configuration list for PBXNativeTarget "conpass_clientUITests" */;
+			buildConfigurationList = 574F9169232B9486003C5D75 /* Build configuration list for PBXNativeTarget "qiita_clientUITests" */;
 			buildPhases = (
 				574F9156232B9486003C5D75 /* Sources */,
 				574F9157232B9486003C5D75 /* Frameworks */,
@@ -277,9 +283,9 @@
 			dependencies = (
 				574F915C232B9486003C5D75 /* PBXTargetDependency */,
 			);
-			name = conpass_clientUITests;
+			name = qiita_clientUITests;
 			productName = conpass_clientUITests;
-			productReference = 574F915A232B9486003C5D75 /* conpass_clientUITests.xctest */;
+			productReference = 574F915A232B9486003C5D75 /* qiita_clientUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -305,7 +311,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 574F9136232B9484003C5D75 /* Build configuration list for PBXProject "conpass_client" */;
+			buildConfigurationList = 574F9136232B9484003C5D75 /* Build configuration list for PBXProject "qiita_client" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -318,9 +324,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				574F913A232B9484003C5D75 /* conpass_client */,
-				574F914E232B9486003C5D75 /* conpass_clientTests */,
-				574F9159232B9486003C5D75 /* conpass_clientUITests */,
+				574F913A232B9484003C5D75 /* qiita_client */,
+				574F914E232B9486003C5D75 /* qiita_clientTests */,
+				574F9159232B9486003C5D75 /* qiita_clientUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -334,7 +340,7 @@
 				574F1D60232CBD5400559D6F /* EventList.storyboard in Resources */,
 				574F9178232BAB1C003C5D75 /* Input.xcfilelist in Resources */,
 				574F9146232B9486003C5D75 /* Assets.xcassets in Resources */,
-				574F9144232B9484003C5D75 /* SearchEvent.storyboard in Resources */,
+				574F9144232B9484003C5D75 /* SearchEntry.storyboard in Resources */,
 				574F9185232BDA03003C5D75 /* Top.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,10 +392,12 @@
 				574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */,
 				574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */,
 				574F1D63232CBE7900559D6F /* EventListViewController.swift in Sources */,
-				574F918B232BDEAD003C5D75 /* TopEventModel.swift in Sources */,
-				574F9189232BDE93003C5D75 /* TopEventViewModel.swift in Sources */,
-				574F9183232BD7DD003C5D75 /* TopEventViewController.swift in Sources */,
-				574F9187232BDB71003C5D75 /* TopEventTableViewCell.swift in Sources */,
+				574F918B232BDEAD003C5D75 /* TopEntryModel.swift in Sources */,
+				5748A3E0232D29AD004E7FD8 /* Entry.swift in Sources */,
+				574F9189232BDE93003C5D75 /* TopEntryViewModel.swift in Sources */,
+				5748A3DE232D1BD8004E7FD8 /* Config.swift in Sources */,
+				574F9183232BD7DD003C5D75 /* TopEntryViewController.swift in Sources */,
+				574F9187232BDB71003C5D75 /* TopEntryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,23 +422,23 @@
 /* Begin PBXTargetDependency section */
 		574F9151232B9486003C5D75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 574F913A232B9484003C5D75 /* conpass_client */;
+			target = 574F913A232B9484003C5D75 /* qiita_client */;
 			targetProxy = 574F9150232B9486003C5D75 /* PBXContainerItemProxy */;
 		};
 		574F915C232B9486003C5D75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 574F913A232B9484003C5D75 /* conpass_client */;
+			target = 574F913A232B9484003C5D75 /* qiita_client */;
 			targetProxy = 574F915B232B9486003C5D75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		574F9142232B9484003C5D75 /* SearchEvent.storyboard */ = {
+		574F9142232B9484003C5D75 /* SearchEntry.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				574F9143232B9484003C5D75 /* Base */,
 			);
-			name = SearchEvent.storyboard;
+			name = SearchEntry.storyboard;
 			sourceTree = "<group>";
 		};
 		574F9147232B9486003C5D75 /* LaunchScreen.storyboard */ = {
@@ -621,7 +629,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/conpass_client.app/conpass_client";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/qiita_client.app/qiita_client";
 			};
 			name = Debug;
 		};
@@ -642,7 +650,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/conpass_client.app/conpass_client";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/qiita_client.app/qiita_client";
 			};
 			name = Release;
 		};
@@ -689,7 +697,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		574F9136232B9484003C5D75 /* Build configuration list for PBXProject "conpass_client" */ = {
+		574F9136232B9484003C5D75 /* Build configuration list for PBXProject "qiita_client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				574F9161232B9486003C5D75 /* Debug */,
@@ -698,7 +706,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		574F9163232B9486003C5D75 /* Build configuration list for PBXNativeTarget "conpass_client" */ = {
+		574F9163232B9486003C5D75 /* Build configuration list for PBXNativeTarget "qiita_client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				574F9164232B9486003C5D75 /* Debug */,
@@ -707,7 +715,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		574F9166232B9486003C5D75 /* Build configuration list for PBXNativeTarget "conpass_clientTests" */ = {
+		574F9166232B9486003C5D75 /* Build configuration list for PBXNativeTarget "qiita_clientTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				574F9167232B9486003C5D75 /* Debug */,
@@ -716,7 +724,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		574F9169232B9486003C5D75 /* Build configuration list for PBXNativeTarget "conpass_clientUITests" */ = {
+		574F9169232B9486003C5D75 /* Build configuration list for PBXNativeTarget "qiita_clientUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				574F916A232B9486003C5D75 /* Debug */,

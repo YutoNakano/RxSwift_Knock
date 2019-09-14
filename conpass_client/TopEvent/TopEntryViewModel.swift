@@ -1,5 +1,5 @@
 //
-//  TopEventModel.swift
+//  TopViewModel.swift
 //  conpass_client
 //
 //  Created by 中野湧仁 on 2019/09/13.
@@ -8,12 +8,11 @@
 
 import Foundation
 import RxSwift
-import Alamofire
 
-protocol TopEventModelProtocol {
+final class TopEntryViewModel {
     
-}
-
-final class TopEventModel: TopEventModelProtocol {
     
+    init(model: TopEntryModelProtocol) {
+        model.request()
+    }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-final class SearchEventViewController: UIViewController {
+final class SearchEntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
