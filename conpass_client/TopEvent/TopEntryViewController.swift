@@ -20,7 +20,9 @@ final class TopEntryViewController: UIViewController {
         }
     }
     
-    private lazy var viewModel = TopEntryViewModel(searchBarText: searchBar.rx.text.asObservable(), searchButtonClicked: searchBar.rx.searchButtonClicked.asObservable(), model: TopEntryModel())
+    private lazy var viewModel = TopEntryViewModel(searchBarText: searchBar.rx.text.asObservable(), searchButtonClicked: searchBar.rx.searchButtonClicked.asObservable(), itemSelected: tableView.rx.itemSelected.asObservable(),
+        model: TopEntryModel()
+    )
     
     private let disposeBag = DisposeBag()
     
@@ -31,6 +33,14 @@ final class TopEntryViewController: UIViewController {
         
         viewModel.reloadData
         .bind(to: reloadData)
+        .disposed(by: disposeBag)
+        
+        viewModel.deselectRow
+        .bind(to: deselectRow)
+        .disposed(by: disposeBag)
+        
+        viewModel.transitionToEntry
+        .bind(to: transitionToEntry)
         .disposed(by: disposeBag)
         
     }
@@ -69,9 +79,19 @@ extension TopEntryViewController {
         }
     }
     
-//    private var deselectRow: Binder<IndexPath> {
-//
-//    }
+    private var deselectRow: Binder<IndexPath> {
+        return Binder(self) { me, indexPath in
+            me.tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+    
+    private var transitionToEntry: Binder<Entry.Value.Thmbnail.ImageDetails>  {
+        return Binder(self) { [weak self] me, imageDetail in
+            let storyboard = UIStoryboard(name: "EventList", bundle: nil).instantiateInitialViewController() as! EntryListViewController
+            storyboard.entryUrl = imageDetail.contentUrl
+            self?.navigationController?.pushViewController(storyboard, animated: true)
+        }
+    }
 }
 
 extension TopEntryViewController: UISearchBarDelegate {

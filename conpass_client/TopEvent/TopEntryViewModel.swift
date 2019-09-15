@@ -21,14 +21,23 @@ final class TopEntryViewModel {
     private let _entries = BehaviorRelay<[Entry.Value]>(value: [])
     
     let reloadData: Observable<Void>
+    let deselectRow: Observable<IndexPath>
+    let transitionToEntry: Observable<Entry.Value.Thmbnail.ImageDetails>
     
     init(searchBarText: Observable<String?>,
          searchButtonClicked: Observable<Void>,
+         itemSelected: Observable<IndexPath>,
          model: TopEntryModelProtocol) {
         self.topEntryViewModel = model
         
+        self.deselectRow = itemSelected.map { $0 }
         self.reloadData = _entries.map { _ in }
-
+        
+        self.transitionToEntry = itemSelected.withLatestFrom(_entries) { ($0, $1) }
+            .flatMap({ (indexPath, entryValue) -> Observable<Entry.Value.Thmbnail.ImageDetails> in
+                guard indexPath.row < entryValue.count else { return .empty() }
+                return .just(entryValue[indexPath.row].image.thumbnail)
+            })
         
         let searchResponse = searchButtonClicked
             .withLatestFrom(searchBarText)
@@ -55,10 +64,10 @@ final class TopEntryViewModel {
         searchResponse
             .flatMap { event -> Observable<Error> in
                 event.error.map(Observable.just) ?? .empty()
-        }
+            }
             .subscribe(onNext: { error in
                 // TODO: エラー処理
             })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
 }
