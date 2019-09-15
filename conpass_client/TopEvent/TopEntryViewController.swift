@@ -37,6 +37,7 @@ final class TopEntryViewController: UIViewController {
     
     func setup() {
         tableView.rowHeight = 84
+        searchBar.delegate = self
     }
 }
 
@@ -47,7 +48,10 @@ extension TopEntryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TopEntryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TopEntryTableViewCell", for: indexPath) as! TopEntryTableViewCell
-        cell.titleLabel.text = viewModel.entries[indexPath.row].description
+        let entry = viewModel.entries[indexPath.row]
+
+        cell.titleLabel.text = entry.description
+        cell.thumbnail.image = UIImage(urlString: entry.image.thumbnail.contentUrl)
         return cell
     }
     
@@ -63,5 +67,29 @@ extension TopEntryViewController {
         return Binder(self) { me, _ in
             me.tableView.reloadData()
         }
+    }
+    
+//    private var deselectRow: Binder<IndexPath> {
+//
+//    }
+}
+
+extension TopEntryViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+}
+
+extension UIImage {
+    convenience init(urlString: String) {
+        let url = URL(string: urlString)
+        do {
+            let data = try Data(contentsOf: url!)
+            self.init(data: data)!
+            return
+        } catch let err {
+            print(err)
+        }
+        self.init()
     }
 }

@@ -11,6 +11,7 @@ import RxSwift
 
 final class TopEntryTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbnail: UIImageView!
     
     
 }
