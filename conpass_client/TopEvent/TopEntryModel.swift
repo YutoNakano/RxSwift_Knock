@@ -12,7 +12,7 @@ import Alamofire
 
 
 protocol TopEntryModelProtocol {
-    func request()
+    func fetchEntry(query: String) -> Observable<[Entry]>
 }
 
 final class TopEntryModel: TopEntryModelProtocol {
@@ -22,27 +22,42 @@ final class TopEntryModel: TopEntryModelProtocol {
         "Ocp-Apim-Subscription-Key": Config.apiKey
     ]
     
-    var dic = [String:AnyObject]()
+    var params: [String: AnyObject] = [
+        "count": "20" as AnyObject,
+        "mkt": "ja-JP" as AnyObject,
+        "safesearch": "Moderate" as AnyObject
+    ]
     
+    func request(query: String, completion: @escaping ((Swift.Result<Entry, Error>) -> Void)) {
+        params["q"] = query as AnyObject
     
-    
-    func request() {
-        dic["q"] = "介護" as AnyObject?
-        dic["count"] = "20" as AnyObject?
-        dic["mkt"] = "ja-JP" as AnyObject?
-        dic["safesearch"] = "Moderate" as AnyObject?
-        
-        Alamofire.request(endPoint, method: .get, parameters: dic, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+        Alamofire.request(endPoint, method: .get, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch response.result {
             case let .success(value):
-                print(value)
                 let result = try! JSONDecoder().decode(Entry.self, withJSONObject: value, options: .prettyPrinted)
-                print(result)
+                completion(.success(result))
             case let .failure(error):
-                print(error)
+                completion(.failure(error))
             }
         }
+        
     }
+    
+    func fetchEntry(query: String) -> Observable<[Entry]> {
+        
+        return Observable.create { [weak self] observer in
+            let _ = self?.request(query: query) { result in
+                switch result {
+                case let .success(response):
+                    observer.onNext([response])
+                case let .failure(error):
+                    observer.onError(error)
+                }
+            }
+         return Disposables.create()
+        }
+    }
+    
 }
 
 extension JSONDecoder {

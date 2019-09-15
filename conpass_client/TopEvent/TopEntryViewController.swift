@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RxCocoa
 import RxSwift
 
 final class TopEntryViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             self.tableView.dataSource = self
@@ -18,19 +20,34 @@ final class TopEntryViewController: UIViewController {
         }
     }
     
+    private lazy var viewModel = TopEntryViewModel(searchBarText: searchBar.rx.text.asObservable(), searchButtonClicked: searchBar.rx.searchButtonClicked.asObservable(), model: TopEntryModel())
+    
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let viewModel = TopEntryViewModel(model: TopEntryModel())
+        
+        setup()
+        
+        viewModel.reloadData
+        .bind(to: reloadData)
+        .disposed(by: disposeBag)
+        
+    }
+    
+    func setup() {
+        tableView.rowHeight = 84
     }
 }
 
 extension TopEntryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.entries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TopEntryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TopEntryTableViewCell", for: indexPath) as! TopEntryTableViewCell
+        cell.titleLabel.text = viewModel.entries[indexPath.row].value.description
         return cell
     }
     
@@ -38,4 +55,13 @@ extension TopEntryViewController: UITableViewDataSource {
 
 extension TopEntryViewController: UITableViewDelegate {
     
+}
+
+extension TopEntryViewController {
+    
+    private var reloadData: Binder<Void> {
+        return Binder(self) { me, _ in
+            me.tableView.reloadData()
+        }
+    }
 }
