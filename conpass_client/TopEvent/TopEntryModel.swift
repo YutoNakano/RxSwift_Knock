@@ -12,7 +12,7 @@ import Alamofire
 
 
 protocol TopEntryModelProtocol {
-    func fetchEntry(query: String) -> Observable<[Entry]>
+    func fetchEntry(query: String) -> Observable<[Entry.Value]>
 }
 
 final class TopEntryModel: TopEntryModelProtocol {
@@ -28,14 +28,14 @@ final class TopEntryModel: TopEntryModelProtocol {
         "safesearch": "Moderate" as AnyObject
     ]
     
-    func request(query: String, completion: @escaping ((Swift.Result<Entry, Error>) -> Void)) {
+    func request(query: String, completion: @escaping ((Swift.Result<[Entry.Value], Error>) -> Void)) {
         params["q"] = query as AnyObject
     
         Alamofire.request(endPoint, method: .get, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch response.result {
             case let .success(value):
                 let result = try! JSONDecoder().decode(Entry.self, withJSONObject: value, options: .prettyPrinted)
-                completion(.success(result))
+                completion(.success(result.value))
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -43,13 +43,13 @@ final class TopEntryModel: TopEntryModelProtocol {
         
     }
     
-    func fetchEntry(query: String) -> Observable<[Entry]> {
+    func fetchEntry(query: String) -> Observable<[Entry.Value]> {
         
         return Observable.create { [weak self] observer in
             let _ = self?.request(query: query) { result in
                 switch result {
                 case let .success(response):
-                    observer.onNext([response])
+                    observer.onNext(response)
                 case let .failure(error):
                     observer.onError(error)
                 }

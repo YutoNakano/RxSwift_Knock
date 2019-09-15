@@ -47,7 +47,7 @@ extension TopEntryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TopEntryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TopEntryTableViewCell", for: indexPath) as! TopEntryTableViewCell
-        cell.titleLabel.text = viewModel.entries[indexPath.row].value.description
+        cell.titleLabel.text = viewModel.entries[indexPath.row].description
         return cell
     }
     

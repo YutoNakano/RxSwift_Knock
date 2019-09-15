@@ -14,11 +14,11 @@ final class TopEntryViewModel {
     private let topEntryViewModel: TopEntryModelProtocol
     private let disposeBag = DisposeBag()
     
-    var entries: [Entry] {
+    var entries: [Entry.Value] {
         return _entries.value
     }
     
-    private let _entries = BehaviorRelay<[Entry]>(value: [])
+    private let _entries = BehaviorRelay<[Entry.Value]>(value: [])
     
     let reloadData: Observable<Void>
     
@@ -33,7 +33,7 @@ final class TopEntryViewModel {
         let searchResponse = searchButtonClicked
             .withLatestFrom(searchBarText)
             .flatMapFirst {[weak self] text ->
-                Observable<Event<[Entry]>> in
+                Observable<Event<[Entry.Value]>> in
                 guard let me = self, let query = text else {
                     return .empty()
                 }
@@ -45,7 +45,7 @@ final class TopEntryViewModel {
         
         // Observable<Event<[Entry]>>型
         searchResponse
-            .flatMap { event -> Observable<[Entry]> in
+            .flatMap { event -> Observable<[Entry.Value]> in
                 
                 event.element.map(Observable.just) ?? .empty()
             }
