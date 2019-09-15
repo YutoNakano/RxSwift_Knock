@@ -10,6 +10,10 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+struct User {
+    let name: String
+}
+
 final class TopEntryViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -19,6 +23,22 @@ final class TopEntryViewController: UIViewController {
             self.tableView.delegate = self
         }
     }
+    
+    private let allUsers = [
+        User(name: "かとう"),
+        User(name: "たなか"),
+        User(name: "ひらや"),
+        User(name: "おおはし"),
+        User(name: "やまもと"),
+        User(name: "ふかさわ"),
+        User(name: "さいとう"),
+        User(name: "くどう"),
+        User(name: "すわ"),
+        User(name: "わたなべ")
+    ]
+    
+    private var filteredUsers = [User]()
+    
     
     private lazy var viewModel = TopEntryViewModel(searchBarText: searchBar.rx.text.asObservable(), searchButtonClicked: searchBar.rx.searchButtonClicked.asObservable(), itemSelected: tableView.rx.itemSelected.asObservable(),
         model: TopEntryModel()
@@ -43,6 +63,8 @@ final class TopEntryViewController: UIViewController {
         .bind(to: transitionToEntry)
         .disposed(by: disposeBag)
         
+        setupSearchBar()
+        
     }
     
     func setup() {
@@ -53,15 +75,17 @@ final class TopEntryViewController: UIViewController {
 
 extension TopEntryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.entries.count
+//        return viewModel.entries.count
+        return filteredUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TopEntryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TopEntryTableViewCell", for: indexPath) as! TopEntryTableViewCell
-        let entry = viewModel.entries[indexPath.row]
+//        let entry = viewModel.entries[indexPath.row]
 
-        cell.titleLabel.text = entry.description
-        cell.thumbnail.image = UIImage(urlString: entry.image.thumbnail.contentUrl)
+//        cell.titleLabel.text = entry.description
+//        cell.thumbnail.image = UIImage(urlString: entry.image.thumbnail.contentUrl)
+        cell.textLabel?.text = filteredUsers[indexPath.row].name
         return cell
     }
     
@@ -72,6 +96,31 @@ extension TopEntryViewController: UITableViewDelegate {
 }
 
 extension TopEntryViewController {
+    
+    func setupSearchBar() {
+        let debouncetime: RxTimeInterval = .microseconds(300)
+        let incrementalSearchTextObservable = rx
+            .methodInvoked(#selector(UISearchBarDelegate.searchBar(_:shouldChangeTextIn:replacementText:)))
+            .debounce(debouncetime, scheduler: MainScheduler.instance)
+            .flatMap { [unowned self] _ in
+                Observable.just(self.searchBar.text ?? "")
+        }                                      // 空文字やnilはオブザーブしない
+        let textObservable = searchBar.rx.text.orEmpty.asObservable()
+        let searchTextObservable = Observable.merge(incrementalSearchTextObservable, textObservable)
+            .skip(1)
+            .debounce(debouncetime, scheduler: MainScheduler.instance)
+            // 変化があるまでイベントを発行しない
+            .distinctUntilChanged()
+        
+        searchTextObservable.subscribe(onNext: { [unowned self] text in
+            if text.isEmpty {
+                self.filteredUsers = self.allUsers
+            } else {
+                self.filteredUsers = self.allUsers.filter { $0.name.contains(text) }
+            }
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+    }
     
     private var reloadData: Binder<Void> {
         return Binder(self) { me, _ in
@@ -97,6 +146,10 @@ extension TopEntryViewController {
 extension TopEntryViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return true
     }
 }
 
