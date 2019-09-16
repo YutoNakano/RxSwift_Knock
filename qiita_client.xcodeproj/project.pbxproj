@@ -169,7 +169,6 @@
 				574F918C232BDF99003C5D75 /* TopEvent */,
 				574F917D232BC7BE003C5D75 /* Search */,
 				574F913E232B9484003C5D75 /* AppDelegate.swift */,
-				574F9142232B9484003C5D75 /* SearchEntry.storyboard */,
 				574F9145232B9486003C5D75 /* Assets.xcassets */,
 				574F9147232B9486003C5D75 /* LaunchScreen.storyboard */,
 				574F914A232B9486003C5D75 /* Info.plist */,
@@ -210,6 +209,7 @@
 		574F917D232BC7BE003C5D75 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				574F9142232B9484003C5D75 /* SearchEntry.storyboard */,
 				574F9140232B9484003C5D75 /* SearchEventViewController.swift */,
 				574F917E232BC7CF003C5D75 /* SearchEventViewModel.swift */,
 				574F9180232BC7F2003C5D75 /* SearchEventModel.swift */,
