@@ -11,9 +11,24 @@ import RxSwift
 
 final class SearchEntryViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let password = PublishSubject<String>()
+        let repeatedPassword = PublishSubject<String>()
+        _ = Observable.combineLatest(password, repeatedPassword) { "\($0), \($1)"}
+            .subscribe(onNext: { print("onNext: ", $0) })
+        password.onNext("a")
+        password.onNext("ab")
+        repeatedPassword.onNext("A")
+        repeatedPassword.onNext("AB")
+        repeatedPassword.onNext("ABC")
+        
+        
+        
     }
     
     
