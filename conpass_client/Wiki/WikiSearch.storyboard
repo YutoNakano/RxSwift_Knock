@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zSN-QM-oAp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wiki Search View Controller-->
+        <scene sceneID="Wp0-rQ-aY8">
+            <objects>
+                <viewController id="zSN-QM-oAp" customClass="WikiSearchViewController" customModule="qiita_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aBr-Yd-5Ek">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ly-N7-1pP">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="69" id="DlW-lQ-MZJ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DlW-lQ-MZJ" id="ZKp-ju-qpi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="9Y7-h3-6OT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PUd-Vm-OuU" firstAttribute="trailing" secondItem="2ly-N7-1pP" secondAttribute="trailing" id="2Vd-o7-yfC"/>
+                            <constraint firstItem="9Y7-h3-6OT" firstAttribute="trailing" secondItem="PUd-Vm-OuU" secondAttribute="trailing" id="42A-6o-mA2"/>
+                            <constraint firstItem="9Y7-h3-6OT" firstAttribute="leading" secondItem="PUd-Vm-OuU" secondAttribute="leading" id="89Y-qf-ZD4"/>
+                            <constraint firstItem="PUd-Vm-OuU" firstAttribute="bottom" secondItem="2ly-N7-1pP" secondAttribute="bottom" id="PXk-eJ-gia"/>
+                            <constraint firstItem="9Y7-h3-6OT" firstAttribute="top" secondItem="PUd-Vm-OuU" secondAttribute="top" id="QrB-Rb-Dty"/>
+                            <constraint firstItem="2ly-N7-1pP" firstAttribute="leading" secondItem="PUd-Vm-OuU" secondAttribute="leading" id="mV9-DI-EXh"/>
+                            <constraint firstItem="2ly-N7-1pP" firstAttribute="top" secondItem="9Y7-h3-6OT" secondAttribute="bottom" id="uKc-3c-8lV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PUd-Vm-OuU"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="9Y7-h3-6OT" id="h4F-Iq-gvk"/>
+                        <outlet property="tableView" destination="2ly-N7-1pP" id="XYX-fg-ooH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aod-Gu-xcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>

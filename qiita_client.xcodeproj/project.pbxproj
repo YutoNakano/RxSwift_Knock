@@ -34,6 +34,12 @@
 		574F918B232BDEAD003C5D75 /* TopEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F918A232BDEAD003C5D75 /* TopEntryModel.swift */; };
 		574F918E232BE148003C5D75 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574F918D232BE147003C5D75 /* Alamofire.framework */; };
 		574F918F232BE148003C5D75 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 574F918D232BE147003C5D75 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5758EDFE232F723E00AD49DA /* WikiSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758EDFD232F723E00AD49DA /* WikiSearchViewController.swift */; };
+		5758EE00232F726100AD49DA /* WikiSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5758EDFF232F726100AD49DA /* WikiSearch.storyboard */; };
+		5758EE02232F72DD00AD49DA /* WikeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758EE01232F72DD00AD49DA /* WikeSearchViewModel.swift */; };
+		5758EE04232F72F400AD49DA /* WikiSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758EE03232F72F400AD49DA /* WikiSearchModel.swift */; };
+		5758EE06232F772700AD49DA /* WikiAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758EE05232F772700AD49DA /* WikiAPIClient.swift */; };
+		5758EE08232FC0D700AD49DA /* WikipediaSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758EE07232FC0D700AD49DA /* WikipediaSearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +106,12 @@
 		574F9188232BDE93003C5D75 /* TopEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntryViewModel.swift; sourceTree = "<group>"; };
 		574F918A232BDEAD003C5D75 /* TopEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntryModel.swift; sourceTree = "<group>"; };
 		574F918D232BE147003C5D75 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5758EDFD232F723E00AD49DA /* WikiSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchViewController.swift; sourceTree = "<group>"; };
+		5758EDFF232F726100AD49DA /* WikiSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WikiSearch.storyboard; sourceTree = "<group>"; };
+		5758EE01232F72DD00AD49DA /* WikeSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikeSearchViewModel.swift; sourceTree = "<group>"; };
+		5758EE03232F72F400AD49DA /* WikiSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiSearchModel.swift; sourceTree = "<group>"; };
+		5758EE05232F772700AD49DA /* WikiAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAPIClient.swift; sourceTree = "<group>"; };
+		5758EE07232FC0D700AD49DA /* WikipediaSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +177,7 @@
 		574F913D232B9484003C5D75 /* conpass_client */ = {
 			isa = PBXGroup;
 			children = (
+				5758EDFA232F720600AD49DA /* Wiki */,
 				574F1D61232CBE4C00559D6F /* EventList */,
 				574F918C232BDF99003C5D75 /* TopEvent */,
 				574F917D232BC7BE003C5D75 /* Search */,
@@ -228,6 +241,19 @@
 				5748A3DF232D29AD004E7FD8 /* Entry.swift */,
 			);
 			path = TopEvent;
+			sourceTree = "<group>";
+		};
+		5758EDFA232F720600AD49DA /* Wiki */ = {
+			isa = PBXGroup;
+			children = (
+				5758EDFD232F723E00AD49DA /* WikiSearchViewController.swift */,
+				5758EDFF232F726100AD49DA /* WikiSearch.storyboard */,
+				5758EE01232F72DD00AD49DA /* WikeSearchViewModel.swift */,
+				5758EE03232F72F400AD49DA /* WikiSearchModel.swift */,
+				5758EE05232F772700AD49DA /* WikiAPIClient.swift */,
+				5758EE07232FC0D700AD49DA /* WikipediaSearchResponse.swift */,
+			);
+			path = Wiki;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				574F9149232B9486003C5D75 /* LaunchScreen.storyboard in Resources */,
+				5758EE00232F726100AD49DA /* WikiSearch.storyboard in Resources */,
 				574F1D60232CBD5400559D6F /* EventList.storyboard in Resources */,
 				574F9178232BAB1C003C5D75 /* Input.xcfilelist in Resources */,
 				574F9146232B9486003C5D75 /* Assets.xcassets in Resources */,
@@ -388,15 +415,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				574F917F232BC7CF003C5D75 /* SearchEventViewModel.swift in Sources */,
+				5758EE04232F72F400AD49DA /* WikiSearchModel.swift in Sources */,
 				574F9141232B9484003C5D75 /* SearchEventViewController.swift in Sources */,
 				574F9181232BC7F2003C5D75 /* SearchEventModel.swift in Sources */,
+				5758EE08232FC0D700AD49DA /* WikipediaSearchResponse.swift in Sources */,
 				574F913F232B9484003C5D75 /* AppDelegate.swift in Sources */,
+				5758EE06232F772700AD49DA /* WikiAPIClient.swift in Sources */,
 				574F1D63232CBE7900559D6F /* EventListViewController.swift in Sources */,
 				574F918B232BDEAD003C5D75 /* TopEntryModel.swift in Sources */,
+				5758EE02232F72DD00AD49DA /* WikeSearchViewModel.swift in Sources */,
 				5748A3E0232D29AD004E7FD8 /* Entry.swift in Sources */,
 				574F9189232BDE93003C5D75 /* TopEntryViewModel.swift in Sources */,
 				5748A3DE232D1BD8004E7FD8 /* Config.swift in Sources */,
 				574F9183232BD7DD003C5D75 /* TopEntryViewController.swift in Sources */,
+				5758EDFE232F723E00AD49DA /* WikiSearchViewController.swift in Sources */,
 				574F9187232BDB71003C5D75 /* TopEntryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
